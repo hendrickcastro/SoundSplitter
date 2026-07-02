@@ -175,9 +175,18 @@ se congele.
 
 ## Distribución
 
-`.dmg` firmado **ad-hoc**. En otro Mac, Gatekeeper lo bloquea; ábrelo con clic
-derecho → Abrir, o `xattr -dr com.apple.quarantine /Applications/SoundSplitter.app`.
-Distribución "limpia" requiere Developer ID + notarización (cuenta de pago).
+El `.dmg` va firmado **ad-hoc** (proyecto gratuito, sin cuenta de Apple). Al
+descargarlo, macOS muestra *"Apple could not verify…"*. Es normal — se desbloquea
+en 5 segundos con el método de la sección [Instalación](#-instalación-desde-el-release):
+
+```bash
+xattr -dr com.apple.quarantine /Applications/SoundSplitter.app
+```
+
+**Opcional (requiere cuenta Apple Developer de pago, $99/año):** para eliminar el
+aviso por completo (como FineTune), hay un pipeline de firma Developer ID +
+notarización listo en `scripts/notarize.sh` / `make notarize`. No es necesario
+para usar la app.
 
 ## Roadmap
 
