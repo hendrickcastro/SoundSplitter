@@ -22,6 +22,28 @@ extensión de kernel: usa la API nativa **Core Audio Process Taps** (macOS 14.4+
 
 ---
 
+## 📥 Instalación (desde el release)
+
+1. Descarga el `.dmg` desde [**Releases**](../../releases/latest), ábrelo y
+   **arrastra SoundSplitter a Aplicaciones**.
+2. La app **no está notarizada por Apple** (proyecto gratuito), así que verás
+   *"Apple could not verify…"*. Es esperado — desbloquéala con **una** opción:
+
+   **A — Terminal (rápido):**
+   ```bash
+   xattr -dr com.apple.quarantine /Applications/SoundSplitter.app
+   ```
+   Luego ábrela normal.
+
+   **B — Sin Terminal:** doble clic (sale el aviso → *Listo*), ve a **Ajustes del
+   Sistema → Privacidad y seguridad**, y pulsa **"Abrir de todas formas"** junto
+   al mensaje de SoundSplitter. Confirma con **Abrir**.
+3. Al enrutar por primera vez, concede el **permiso de grabación de audio**
+   (Ajustes → Privacidad y seguridad → Grabación de audio).
+
+> ¿Por qué el aviso? Eliminarlo requiere **Developer ID + notarización de Apple**
+> (cuenta de pago, $99/año). El desbloqueo de arriba es seguro: es tu descarga.
+
 ## 📦 Dónde está el DMG
 
 `make dmg` lo genera en dos sitios visibles:
