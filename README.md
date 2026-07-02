@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/icon.png" width="160" alt="SoundSplitter">
+</p>
+
 # SoundSplitter 🔊
 
 Alternativa **open source** a SoundSource para macOS. Captura el audio del
